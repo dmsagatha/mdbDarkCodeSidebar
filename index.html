@@ -30,22 +30,8 @@
     </style>
   </head>
   <body class="grey lighten-3">
-    <!-- <div class="sideNavbar">
-      <ul>
-        <li><a href="#" class="fas fa-address-book"></a></li>
-        <li><a href="#" class="fas fa-accusoft"></a></li>
-        <li><a href="#" class="fas fa-ambulance"></a></li>
-        <li><a href="#" class="fas fa-baby"></a></li>
-        <li><a href="#" class="fas fa-calendar-alt"></a></li>
-        <li><a href="#" class="fas fa-closed-captioning"></a></li>
-        <li><a href="#" class="fas fa-diagnoses"></a></li>
-        <li><a href="#" class="fas fa-grin-beam-sweat"></a></li>
-        <li><a href="#" class="fas fa-grin-hearts"></a></li>
-      </ul>
-    </div> -->
-
     <!-- Sidebar -->
-    <div class="sideNavbar">
+    <div class="sideNavbar toggled">
       <div class="sidebar">
         <div class="list-group list-group-flush">
           <a href="#" class="list-group-item list-group-item-action waves-effect">
@@ -57,27 +43,33 @@
             <span class="text">Profile</span>
           </a>
 
-          <a href="#imports" class="list-group-item list-group-item-action waves-effect"
-            data-toggle="collapse" data-target="#imports">
-            <i class="fas fa-file-import mr-3 blue-grey-text"></i>
-            <span class="text">Importaciones &nbsp;&nbsp;&nbsp;</span>
-            <i class="fa fa-angle-down rotate-icon"></i>
-          </a>
-          <ul class="list-unstyled flex-column pl-3 collapse" id="imports" aria-expanded="false">
-            <a class="list-group-item list-group-item-action waves-effect" href="">Report 1</a>
-            <a class="list-group-item list-group-item-action waves-effect" href="">Report 2</a>
-          </ul>
-          
-          <a href="#reports" class="list-group-item list-group-item-action waves-effect" 
-            data-toggle="collapse" data-target="#reports">
-            <i class="fas fa-list-ul mr-3 blue-grey-text"></i>
-            <span class="text">Reportes &nbsp;&nbsp;&nbsp;</span>
-            <i class="fa fa-angle-down rotate-icon"></i>
-          </a>
-          <ul class="list-unstyled flex-column pl-3 collapse" id="reports" aria-expanded="false">
-            <a class="list-group-item list-group-item-action waves-effect" href="">Report 1</a>
-            <a class="list-group-item list-group-item-action waves-effect" href="">Report 2</a>
-          </ul>
+          <div class="sidebar-dropdown">
+            <a href="#imports" class="list-group-item list-group-item-action waves-effect"
+              data-toggle="collapse" data-target="#imports">
+              <i class="fas fa-file-import mr-3 blue-grey-text"></i>
+              <span class="text">Importaciones</span>
+            </a>
+            <div class="sidebar-submenu">
+              <ul class="list-unstyled flex-column pl-3 collapse" id="imports" aria-expanded="false">
+                <a class="list-group-item list-group-item-action waves-effect" href="">Report 1</a>
+                <a class="list-group-item list-group-item-action waves-effect" href="">Report 2</a>
+              </ul>
+            </div>
+          </div>
+
+          <div class="sidebar-dropdown">
+            <a href="#reports" class="list-group-item list-group-item-action waves-effect"
+              data-toggle="collapse" data-target="#reports">
+              <i class="fas fa-list-ul mr-3 blue-grey-text"></i>
+              <span class="text">Reportes</span>
+            </a>
+            <div class="sidebar-submenu">
+              <ul class="list-unstyled flex-column pl-3 collapse" id="reports" aria-expanded="false">
+                <a class="list-group-item list-group-item-action waves-effect" href="">Report 1</a>
+                <a class="list-group-item list-group-item-action waves-effect" href="">Report 2</a>
+              </ul>
+            </div>
+          </div>
 
           <a href="#" class="list-group-item list-group-item-action waves-effect">
             <i class="fas fa-table mr-3"></i>
@@ -90,10 +82,6 @@
           <a href="#" class="list-group-item list-group-item-action waves-effect">
             <i class="fas fa-money-bill-alt mr-3"></i>
             <span class="text">Orders</span>
-          </a>
-          <a href="#" class="list-group-item list-group-item-action waves-effect sidebarMenuToggler">
-            <i class="fas fa-list-alt mr-3"></i>
-            <span class="text">Cambiar Tamaño</span>
           </a>
         </div>
       </div><!-- Sidebar -->
@@ -1387,18 +1375,13 @@
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Script -->
+    <script type="text/javascript" src="js/script.js"></script>
 
     <!-- Initializations -->
     <script type="text/javascript">
       // Animations initialization
       new WOW().init();
-    </script>
-
-    <script>
-      $('.sidebarCollapse').on('click', function() {
-        $('.sidebarCollapse').toggleClass('sidebarCollapseC');
-        $('.sideNavbar').toggleClass('side');
-      });
     </script>
 
     <!-- Charts -->
