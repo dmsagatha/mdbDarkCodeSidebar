@@ -25,6 +25,10 @@
   list-style: none;
 }
 
+.sideNavbar li {
+  text-decoration: none;
+}
+
 .sideNavbar ul li a {
   display: block;
   text-decoration: none;
@@ -64,23 +68,35 @@
   margin-left: 0;
 }
 
-.sidebar .list-group .sidebar-dropdown > a:after {
-  content: "\f105";
-  font-family: 'Font Awesome 5 Free';
+
+.sideNavbar .sidebar .list-group-flush .sidebar-dropdown > a:after {
+  font-family: "Font Awesome 5 Free";
   font-weight: 900;
+  content: "\f105";
   font-style: normal;
   display: inline-block;
-  text-align: center;
-  text-decoration: none;
-  background: 0 0;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  background: 0 0;
   position: absolute;
   right: 15px;
   top: 14px;
 }
 
-.sidebar .list-group .sidebar-dropdown.active > a:after {
-  transform: rotate(90deg);
-  right: 17px;
+.sideNavbar .sidebar .list-group-flush .list-unstyled a:before {
+  content: "\f111";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  font-style: normal;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-right: 10px;
+  font-size: 8px;
 }
